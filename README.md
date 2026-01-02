@@ -1,45 +1,30 @@
-#include <stdio.h>
-#include <math.h>
+# Derivative Calculator in C
 
-int main() {
-    int choice;
-    double x, result;
+A simple console-based **Derivative Calculator written in C**.  
+This program calculates the **value of derivatives at a given point x** for common mathematical functions.
 
-    printf("=== Derivative Calculator ===\n");
-    printf("1. d/dx (x^3)\n");
-    printf("2. d/dx (sin x)\n");
-    printf("3. d/dx (cos x)\n");
-    printf("4. d/dx (exp x)\n");
-    printf("Choose function (1-4): ");
-    scanf("%d", &choice);
+Designed for **first-year Computer Science students** and suitable for academic assignments.
 
-    printf("Enter value of x: ");
-    scanf("%lf", &x);
+---
 
-    switch (choice) {
-        case 1:
-            result = 3 * x * x;
-            printf("Derivative = %.4f\n", result);
-            break;
+##  Features
 
-        case 2:
-            result = cos(x);
-            printf("Derivative = %.4f\n", result);
-            break;
+The program supports the following derivatives:
 
-        case 3:
-            result = -sin(x);
-            printf("Derivative = %.4f\n", result);
-            break;
+| Function | Derivative |
+|--------|-----------|
+| \(x^3\) | \(3x^2\) |
+| \(\sin x\) | \(\cos x\) |
+| \(\cos x\) | \(-\sin x\) |
+| \(e^x\) | \(e^x\) |
 
-        case 4:
-            result = exp(x);
-            printf("Derivative = %.4f\n", result);
-            break;
+> Trigonometric functions use **radians**, not degrees.
 
-        default:
-            printf("❌ Invalid choice\n");
-    }
+---
 
-    return 0;
-}
+## Technologies Used
+
+- C Programming Language
+- Standard libraries:
+  - `<stdio.h>`
+  - `<math.h>`
