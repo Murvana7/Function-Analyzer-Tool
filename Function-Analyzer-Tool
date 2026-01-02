@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+double f(double x) {
+    return x * x; 
+}
+
+int main() {
+    double x, h, derivative;
+
+    printf("Enter x: ");
+    scanf("%lf", &x);
+
+    printf("Enter h (small value, e.g. 0.001): ");
+    scanf("%lf", &h);
+
+    derivative = (f(x + h) - f(x)) / h;
+
+    printf("Approximate derivative at x = %.3f is %.6f\n", x, derivative);
+
+    return 0;
+}
